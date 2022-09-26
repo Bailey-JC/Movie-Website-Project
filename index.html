@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <nav>
+            <div class="nav__container">
+                <div class="nav__links">
+                    <img class="nav__logo click" src="./assets/Stan_logo.png" alt="">
+                    <ul class="nav__list">
+                        <li><a href="#" class="nav__link" onclick="alert()">TV Shows</a></li>
+                        <li><a href="#" class="nav__link" onclick="alert()">Movies</a></li>
+                        <li><a href="#" class="nav__link" onclick="alert()">My List</a></li>
+                    </ul>
+                </div>
+                <div class="nav__links">
+                    <div class="nav__search--wrapper">
+                        <button class="nav__search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="nav__profile--wrapper">
+                        <img class="nav__profile" src="./assets/Profile Img.jpg" alt="">
+                        <span>Bailey</span>
+                    </div>
+                </div>
+        </nav>
+    </section>
+    <section>
+        <div class="home-page">
+            <div class="row">
+                <div class="movie-card">Hello</div>
+                <div class="movies__header">
+                    <h1>Australia's leading online streaming service platform </h1>
+                    <h2>Browse from our wide variety of movies & series</h2>
+                </div>
+                <div class="movie__search--wrapper">
+                    <input class="movie__search-bar" type="text" placeholder="Movies & TV Shows" onchange="searchValue(event)">
+                    <button class="movie__search-icon" onclick="">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <h3 class="trending">Trending on Stan</h3>
+            </div>
+
+            <div class="movie__list">
+                <div class="trending-card click">
+                    <div class="movie__poster--wrapper">
+                        <img class="movie__poster"
+                            src="https://m.media-amazon.com/images/M/MV5BYWI4MzIxYzUtMmIzNC00Mzg0LTgwZTItNTk5YWExODJmZDZiXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_SX300.jpg"
+                            alt="">
+                    </div>
+                    <div class="movie__title">Title</div>
+                    <div class="movie__year">Year</div>
+                </div>
+                <div class="trending-card click">
+                    <div class="movie__poster--wrapper">
+                        <img class="movie__poster"
+                            src="https://m.media-amazon.com/images/M/MV5BNDc4MThhN2EtZjMzNC00ZDJmLThiZTgtNThlY2UxZWMzNjdkXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg"
+                            alt="">
+                    </div>
+                    <div class="movie__title">Title</div>
+                    <div class="movie__year">Year</div>
+                </div>
+                <div class="trending-card click">
+                    <div class="movie__poster--wrapper">
+                        <img class="movie__poster"
+                            src="https://m.media-amazon.com/images/M/MV5BMjM1MzczMDgwOV5BMl5BanBnXkFtZTcwMDM4NjM2OQ@@._V1_SX300.jpg"
+                            alt="">
+                    </div>
+                    <div class="movie__title">Title</div>
+                    <div class="movie__year">Year</div>
+                </div>
+                <div class="trending-card click">
+                    <div class="movie__poster--wrapper">
+                        <img class="movie__poster"
+                            src="https://m.media-amazon.com/images/M/MV5BNjdjNGQ4NDEtNTEwYS00MTgxLTliYzQtYzE2ZDRiZjFhZmNlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+                            alt="">
+                    </div>
+                    <div class="movie__title">Title</div>
+                    <div class="movie__year">Year</div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer__container">
+            <a class="footer__anchor" href="#">
+                <figure>
+                    <img class="footer__logo--img click" src="./assets/Stan_logo.png" alt="">
+                </figure>
+            </a>
+            <div class="footer__social--list">
+                <!-- Insert links -->
+                <a href="#" class="footer__social--link">
+                    Home
+                </a>
+                <a href="#" class="footer__social--link">
+                    Terms & Conditions
+                </a>
+                <a href="#" class="footer__social--link">
+                    Privacy Policy
+                </a>
+                <a href="#" class="footer__social--link">
+                    Help
+                </a>
+            </div>
+            <div class="footer__copyright">Copyright &copy; 2022 Stan. All Rights Reserved</div>
+        </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<!-- <div class="movie-card">
+    <figure class="movie__poster--wrapper">
+        <img class="movie__poster" src="">
+    </figure>
+    <div class="movie__info">
+        <div class="movie__title"></div>
+        <div class="movie__year"></div>
+    </div>
+</div> -->

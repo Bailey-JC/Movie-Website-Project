@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  background-color: #141414;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  height: 80px;
+  display: flex;
+}
+
+.row {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+input {
+  width: 100%;
+  max-width: 240px;
+  padding-bottom: 8px ;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1.6px;
+  color: white;
+}
+
+.click {
+  transition: 300ms ease;
+  cursor: pointer;
+}
+
+.click:hover {
+  transform: scale(1.05);
+}
+
+.click:active {
+  transform: scale(1);
+}
+
+li {
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+button {
+  cursor: pointer;
+  font-size: 20px
+}
+
+/* 
+
+    NAVIGATION
+
+*/
+
+.nav__container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  width: 160px;
+  height: auto;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav__links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__link:hover {
+  color: #1989fa;
+}
+
+.nav__link {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 24px;
+}
+
+.Right {
+  display: flex;
+}
+.nav__search--wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.nav__search {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: none;
+  color: white solid 2px;
+}
+
+.nav__profile--wrapper {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.nav__profile {
+  width: 40px;
+  width: 40px;
+  margin-right: 8px;
+  border-radius: 99px;
+}
+
+/* 
+
+  HEADER
+    
+*/
+
+.movie__search--wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 24px;
+}
+
+.movie__search-bar {
+  background-color: none;
+  border: white solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.movie__search-icon:hover {
+  background-color:#1989fa solid
+}
+
+.movie__search-icon {
+  padding: 0 0 8px 8px;
+  border: none;
+}
+
+.movie__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 8px 24px;
+}
+
+.trending-card {
+  margin: 16px 36px 16px 36px;
+  border: 2px ridge rgba(15, 166, 253, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 0px 16px 0px rgba(15, 166, 253, 0.795);
+  overflow: hidden;
+}
+
+.movie__poster {
+  width: 240px;
+  height: 360px;
+  overflow: hidden;
+}
+
+.movie__title {
+  font-size: 24px;
+  padding: 0 16px 8px 16px;
+}
+
+.movie__year {
+  font-size: 16px;
+  color: grey;
+  padding: 0 16px 8px 16px;
+}
+
+/* .card:hover {
+  opacity: 1;
+  transform: translateY(-50%);
+  transition: 300ms all ease
+}
+
+.card:hover {
+  transform: scale(1.07);
+  filter: blur(5px);
+} */
+
+.home-page {
+  padding: 48px 0;
+}
+
+.movies__header {
+  margin: 0 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trending {
+  margin-bottom: 0;
+  padding-top: 32px ;
+}
+
+.trending__movies {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 
+
+    FOOTER
+
+*/
+
+footer {
+}
+
+.footer__container {
+  width: 100%;
+  padding: 48px 0 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__logo--img {
+  width: 160px;
+  height: auto;
+}
+
+.footer__anchor {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer__logo--popper {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  font-weight: 700;
+  opacity: 0;
+  transition: all 300ms ease;
+}
+
+.footer__social--list {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 28px 0;
+}
+
+.footer__copyright {
+  color: #999999;
+}
+
+.footer__social--link {
+}
+
+.footer__social--link:hover {
+  color: #1989fa;
+}
