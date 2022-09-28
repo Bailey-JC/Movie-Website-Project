@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
@@ -18,18 +18,18 @@
                 <div class="nav__links">
                     <img class="nav__logo click" src="./assets/Stan_logo.png" alt="">
                     <ul class="nav__list">
-                        <li><a href="#" class="nav__link" onclick="alert()">TV Shows</a></li>
-                        <li><a href="#" class="nav__link" onclick="alert()">Movies</a></li>
-                        <li><a href="#" class="nav__link" onclick="alert()">My List</a></li>
+                        <li><a href="#" class="nav__link">TV Shows</a></li>
+                        <li><a href="#" class="nav__link">Movies</a></li>
+                        <li><a href="#" class="nav__link">My List</a></li>
                     </ul>
                 </div>
                 <div class="nav__links">
-                    <div class="nav__search--wrapper">
+                    <div class="nav__search--container">
+                        <input class="nav__search-bar" type="text" onchange="searchValue(event)" />
                         <button class="nav__search">
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
-
                     <div class="nav__profile--wrapper">
                         <img class="nav__profile" src="./assets/Profile Img.jpg" alt="">
                         <span>Bailey</span>
@@ -40,13 +40,13 @@
     <section>
         <div class="home-page">
             <div class="row">
-                <div class="movie-card">Hello</div>
                 <div class="movies__header">
                     <h1>Australia's leading online streaming service platform </h1>
                     <h2>Browse from our wide variety of movies & series</h2>
                 </div>
                 <div class="movie__search--wrapper">
-                    <input class="movie__search-bar" type="text" placeholder="Movies & TV Shows" onchange="searchValue(event)">
+                    <input class="movie__search-bar" type="text" placeholder="Movies & TV Shows"
+                        onchange="searchValue(event)">
                     <button class="movie__search-icon" onclick="">
                         <i class="fas fa-search"></i>
                     </button>
@@ -56,44 +56,51 @@
 
             <div class="movie__list">
                 <div class="trending-card click">
-                    <div class="movie__poster--wrapper">
-                        <img class="movie__poster"
+                    <div class="trending__poster--wrapper">
+                        <img class="trending__poster"
                             src="https://m.media-amazon.com/images/M/MV5BYWI4MzIxYzUtMmIzNC00Mzg0LTgwZTItNTk5YWExODJmZDZiXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_SX300.jpg"
                             alt="">
                     </div>
-                    <div class="movie__title">Title</div>
-                    <div class="movie__year">Year</div>
+                    <div class="trending__title">Title</div>
+                    <div class="trending__year">Year</div>
                 </div>
                 <div class="trending-card click">
-                    <div class="movie__poster--wrapper">
-                        <img class="movie__poster"
+                    <div class="trending__poster--wrapper">
+                        <img class="trending__poster"
                             src="https://m.media-amazon.com/images/M/MV5BNDc4MThhN2EtZjMzNC00ZDJmLThiZTgtNThlY2UxZWMzNjdkXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg"
                             alt="">
                     </div>
-                    <div class="movie__title">Title</div>
-                    <div class="movie__year">Year</div>
+                    <div class="trending__title">Title</div>
+                    <div class="trending__year">Year</div>
                 </div>
                 <div class="trending-card click">
-                    <div class="movie__poster--wrapper">
-                        <img class="movie__poster"
+                    <div class="trending__poster--wrapper">
+                        <img class="trending__poster"
                             src="https://m.media-amazon.com/images/M/MV5BMjM1MzczMDgwOV5BMl5BanBnXkFtZTcwMDM4NjM2OQ@@._V1_SX300.jpg"
                             alt="">
                     </div>
-                    <div class="movie__title">Title</div>
-                    <div class="movie__year">Year</div>
+                    <div class="trending__title">Title</div>
+                    <div class="trending__year">Year</div>
                 </div>
                 <div class="trending-card click">
-                    <div class="movie__poster--wrapper">
-                        <img class="movie__poster"
+                    <div class="trending__poster--wrapper">
+                        <img class="trending__poster"
                             src="https://m.media-amazon.com/images/M/MV5BNjdjNGQ4NDEtNTEwYS00MTgxLTliYzQtYzE2ZDRiZjFhZmNlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
                             alt="">
                     </div>
-                    <div class="movie__title">Title</div>
-                    <div class="movie__year">Year</div>
+                    <div class="trending__title">Title</div>
+                    <div class="trending__year">Year</div>
                 </div>
             </div>
         </div>
         </div>
+
+        <div class="movie movie__loading">
+            <i class="fas fa-spinner movie__loading--spinner"></i>
+        </div>
+        <div class="searched__movie"></div>
+        <div class="movie-cards"></div>
+
     </section>
     <footer>
         <div class="footer__container">
@@ -117,7 +124,7 @@
                     Help
                 </a>
             </div>
-            <div class="footer__copyright">Copyright &copy; 2022 Stan. All Rights Reserved</div>
+            <div class="footer__copyright">Copyright &copy; 2022 Dummy Website.</div>
         </div>
         </div>
     </footer>
@@ -125,12 +132,14 @@
 
 </html>
 
-<!-- <div class="movie-card">
-    <figure class="movie__poster--wrapper">
-        <img class="movie__poster" src="">
-    </figure>
-    <div class="movie__info">
-        <div class="movie__title"></div>
-        <div class="movie__year"></div>
+<!-- <div class="movie-cards">
+    <div class="movie-card">
+        <figure class="movie__poster--wrapper">
+            <img class="movie__poster" src="">
+        </figure>
+        <div class="movie__info">
+            <div class="movie__title"></div>
+            <div class="movie__year"></div>
+        </div>
     </div>
 </div> -->
